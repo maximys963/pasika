@@ -1,4 +1,6 @@
+@keyframes ArtAnimation {
 
+}
 /* central part */
 .fashion-container{
     background-color: #d8d8d8;
@@ -72,20 +74,24 @@ align-items: center;
     padding-left: 15px;
 }
 
-menu > li > a{
-    text-align: center;
+.menu > li > a:hover{
+    opacity: 0.8;
 }
+.menu > li > a:active{
+    opacity: 0.5;
+}
+
 /* left menu */
 .additional-menu{
     position: absolute;
-    left: -60%;
+    left: 0px;
     top:20px;
     border-top: 120px solid #070707;
     border-right: 60px solid transparent;
     height: 70px;
     width: 70%;
     filter: drop-shadow(0 5px 5px rgba(0,0,0,.5));
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: center;
 }
@@ -106,8 +112,43 @@ menu > li > a{
     height: 70px;
     width: 70%;
     filter: drop-shadow(0 5px 5px rgba(0,0,0,.5));
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: center;
 }
+/* container for social media refs*/
+.social-container{
+    position: absolute;
+    left:0;
+    bottom: 40px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.insta,
+.facebook{
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.insta:hover{
+    opacity: 0.8;
+}
+.facebook:hover{
+   opacity: 0.8;
+}
+.insta:active{
+    opacity: 0.5;
+}
+.facebook:active{
+    opacity: 0.5;
+}
+
+
+
+
 
