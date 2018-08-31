@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="32px" viewBox="0 0 248 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>ACTIVE SEARCH</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ACTIVE-SEARCH" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M200,30.5 L0.00027810648,30.5" id="Line" stroke="#000000" stroke-width="0.5" stroke-linecap="square" fill-rule="nonzero"></path>
+        <text id="search…" font-family="Montserrat-ExtraLight, Montserrat" font-size="25" font-weight="300" fill="#000000" fill-opacity="0.5">
+            <tspan x="10.1875" y="24">search…</tspan>
+        </text>
+        <g id="Search" transform="translate(232.849242, 16.849242) rotate(-45.000000) translate(-232.849242, -16.849242) translate(223.849242, 4.849242)" fill-rule="nonzero" stroke="#000000" stroke-width="6">
+            <ellipse id="Oval" cx="9" cy="8.72727273" rx="9" ry="8.72727273"></ellipse>
+            <path d="M9.25,17.7272727 L9.25,24" id="Line" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

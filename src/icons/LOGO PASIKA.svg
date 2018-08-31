@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="146px" height="146px" viewBox="0 0 146 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>LOGO PASIKA</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="LOGO-PASIKA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M24.3569094,5.5 C17.4654574,5.5 14.9268778,5.99022232 12.3137595,7.38773327 C10.1759398,8.53105176 8.53105176,10.1759398 7.38773327,12.3137595 C5.99022232,14.9268778 5.5,17.4654574 5.5,24.3569094 L5.5,121.643091 C5.5,128.534543 5.99022232,131.073122 7.38773327,133.68624 C8.53105176,135.82406 10.1759398,137.468948 12.3137595,138.612267 C14.9268778,140.009778 17.4654574,140.5 24.3569094,140.5 L121.643091,140.5 C128.534543,140.5 131.073122,140.009778 133.68624,138.612267 C135.82406,137.468948 137.468948,135.82406 138.612267,133.68624 C140.009778,131.073122 140.5,128.534543 140.5,121.643091 L140.5,24.3569094 C140.5,17.4654574 140.009778,14.9268778 138.612267,12.3137595 C137.468948,10.1759398 135.82406,8.53105176 133.68624,7.38773327 C131.073122,5.99022232 128.534543,5.5 121.643091,5.5 L24.3569094,5.5 Z" id="Rectangle-2" stroke="#000000" stroke-width="11" fill-rule="nonzero"></path>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="38" y="18" width="32" height="16" rx="8"></rect>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="76" y="18" width="32" height="16" rx="8"></rect>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="98" y="37" width="32" height="16" rx="8"></rect>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="16" y="94" width="32" height="16" rx="8"></rect>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="98" y="94" width="32" height="16" rx="8"></rect>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="98" y="113" width="32" height="16" rx="8"></rect>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" style="mix-blend-mode: color-dodge;" cx="24" cy="26" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="72" cy="102" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="24" cy="45" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="24" cy="64" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="24" cy="83" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="24" cy="121" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="122" cy="26" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="72" cy="64" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="120" cy="64" r="8"></circle>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="120" cy="83" r="8"></circle>
+    </g>
+</svg>
