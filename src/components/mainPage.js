@@ -10,7 +10,8 @@ class MainPage extends Component {
            musicBlockWidth: "50%",
            zIndexArt: "-3",
            zIndexMusic: "-2",
-           menuIsOpened: false
+           menuIsOpened: false,
+           searchIsOpen: false
         }
     }
 
@@ -58,29 +59,89 @@ class MainPage extends Component {
         };
 
         const menuMove = () => {
-            console.log("clicked");
-            const menu = document.getElementById('additional-menu');
+                const menu = document.getElementById('additional-menu');
+                const title = document.getElementById('pasika');
+                const magazine = document.getElementById('magazine');
+                const menuMenuItems = document.getElementsByClassName("menu");
+
+
+                if(!this.state.menuIsOpened){
+                    title.style.color = "white";
+                    magazine.style.color = "white";
+                    for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
+                        menuMenuItems[0].childNodes[i].style.color = "white"
+                    }
+                    menu.style.transform = "translateX(790px)";
+                    // menu.style.zIndex = "-1";
+                    this.setState({
+                        menuIsOpened: true,
+                    });
+                    if(this.state.searchIsOpen){
+                        const searchBar = document.getElementById("search");
+                        searchBar.style.transform = "translateX(0)";
+                        this.setState({
+                            searchIsOpen: false,
+                        });
+                    }
+                }else{
+                    menu.style.transform = "translateX(0)";
+                    title.style.color = "black";
+                    magazine.style.color = "black";
+                    for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
+                        menuMenuItems[0].childNodes[i].style.color = "black"
+                    }
+                    // menu.style.zIndex = "2";
+                    this.setState({
+                        menuIsOpened: false,
+                    })
+                }
+
+
+
+        };
+
+        const searchMove  = () =>{
+            const searchBar = document.getElementById("search");
             const title = document.getElementById('pasika');
             const magazine = document.getElementById('magazine');
             const menuMenuItems = document.getElementsByClassName("menu");
-            console.log(menuMenuItems[0].childNodes);
-            title.style.color = "white";
-            magazine.style.color = "white";
-            for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
-                menuMenuItems[0].childNodes[i].style.color = "white"
+            const menu = document.getElementById('additional-menu');
+            if(!this.state.searchIsOpen){
+                title.style.color = "black";
+                magazine.style.color = "black";
+                for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
+                    menuMenuItems[0].childNodes[i].style.color = "black"
+                }
+                searchBar.style.transform = "translateX(-790px)";
+                this.setState({
+                    searchIsOpen: true,
+                });
+                if(this.state.menuIsOpened){
+                    menu.style.transform = "translateX(0)";
+                    title.style.color = "black";
+                    magazine.style.color = "black";
+                    this.setState({
+                        menuIsOpened: false
+                    })
+                }
+            }else{
+                searchBar.style.transform = "translateX(0)";
+                this.setState({
+                    searchIsOpen: false,
+                })
             }
-            menu.style.transform = "translateX(790px)";
-            menu.style.zIndex = "-1";
-            this.setState({
-                menuIsOpened: true
-            })
+
+
+
+
+
         };
 
 
 
         return (
             <div className="main-page-container" >
-                <div className="menu-container" style={{zIndex: 1}} >
+                <div className="menu-container" style={{zIndex: 4}} >
                     <h2 id="pasika" onClick={pasikaAnimation} >PASIKA</h2>
                     <p id="magazine">MAGAZINE</p>
                     <ul className='menu'>
@@ -89,16 +150,17 @@ class MainPage extends Component {
                         <li onClick={musicAnimation}><a>MUSIC</a></li>
                     </ul>
                 </div>
-                <div onClick={menuMove} className="additional-menu" id="additional-menu" style={{zIndex: 2}}>
-                    <img onClick={menuMove}  className="additional-menu-icon" src={require(".././icons/Button menu light.svg")} style={{zIndex: -1}} />
+                <div className="additional-menu" id="additional-menu" style={{zIndex: 2}}>
+                    <img onClick={menuMove}  className="additional-menu-icon" src={require(".././icons/Button menu light.svg")} style={{zIndex: 3}} />
                     <ul className="additional-menu-items">
                         <li><a >CONTACTS</a></li>
                         <li><a >ABOUT US</a></li>
                     </ul>
                 </div>
-                <div className="search"  style={{zIndex: -1}} >
-                    <img className="search-icon" src={require(".././icons/Search.svg")} style={{zIndex: -1}} />
+                <div className="search" id="search" style={{zIndex: 1}} >
+                    <input className="search-input" placeholder="search..."/>
                 </div>
+                <img onClick={searchMove} className="search-icon" id="search-icon" src={require(".././icons/musica-searcher.svg")} style={{zIndex: 2}} />
                     <div className="fashion-container" style={{zIndex: -4}}>
                     </div>
 

@@ -1,5 +1,18 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @keyframes ArtAnimation {
 
+}
+
+
+.main-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 /* central part */
 .fashion-container{
@@ -60,7 +73,7 @@
 
 
 .menu-container{
-    width: 100%;
+    width: 21%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,16 +165,33 @@ animation-delay: 1.5s;
 }
 .search{
     position: absolute;
-    right: 0;
+    right: -62%;
     top: 20px;
-    border-bottom: 120px solid white;
-    border-left: 60px solid transparent;
-    height: 70px;
+    background-color: white;
+    height: 120px;
     width: 70%;
     filter: drop-shadow(0 5px 5px rgba(0,0,0,.5));
-    display: none;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: all 1s ease;
+}
+*:focus {
+    outline: none;
+}
+.search-input{
+    margin-right: 150px;
+    height: 40px;
+    border: none;
+}
+
+.search-icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+
 }
 /* container for social media refs*/
 .social-container{
