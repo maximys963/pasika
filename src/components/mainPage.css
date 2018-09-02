@@ -130,11 +130,13 @@ animation-delay: 1.5s;
 .additional-menu{
     position: absolute;
     top:20px;
-    left: -62%;
-    background-image: url(".././icons/Rectangle.svg");
+    left:-62%;
     height: 120px;
     width: 70%;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,.5));
     display: flex;
+    background-size: auto;
+    background-repeat: no-repeat;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
