@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link, NavLink} from 'react-router-dom'
 import "./mainPage.css"
 
 
@@ -68,8 +69,9 @@ class MainPage extends Component {
                 if(!this.state.menuIsOpened){
                     title.style.color = "white";
                     magazine.style.color = "white";
+                    console.log(menuMenuItems[0].childNodes[0].childNodes[0]);
                     for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
-                        menuMenuItems[0].childNodes[i].style.color = "white"
+                        menuMenuItems[0].childNodes[i].childNodes[0].style.color = "white"
                     }
                     menu.style.transform = "translateX(790px)";
                     // menu.style.zIndex = "-1";
@@ -88,7 +90,7 @@ class MainPage extends Component {
                     title.style.color = "black";
                     magazine.style.color = "black";
                     for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
-                        menuMenuItems[0].childNodes[i].style.color = "black"
+                        menuMenuItems[0].childNodes[i].childNodes[0].style.color = "black"
                     }
                     // menu.style.zIndex = "2";
                     this.setState({
@@ -110,7 +112,7 @@ class MainPage extends Component {
                 title.style.color = "black";
                 magazine.style.color = "black";
                 for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
-                    menuMenuItems[0].childNodes[i].style.color = "black"
+                    menuMenuItems[0].childNodes[i].childNodes[0].style.color = "black"
                 }
                 searchBar.style.transform = "translateX(-790px)";
                 this.setState({
@@ -145,9 +147,9 @@ class MainPage extends Component {
                     <h2 id="pasika" onClick={pasikaAnimation} >PASIKA</h2>
                     <p id="magazine">MAGAZINE</p>
                     <ul className='menu'>
-                        <li onClick={artAnimation}><a>ART</a></li>
-                        <li onClick={fashionAnimation}><a>FASHION</a></li>
-                        <li onClick={musicAnimation}><a>MUSIC</a></li>
+                        <li  onClick={artAnimation}><NavLink className="main-menu-item"  to="/art" style={{textDecoration: 'none', color: 'black'}}>ART</NavLink></li>
+                        <li  onClick={fashionAnimation}><NavLink className="main-menu-item"  to="/fashion" style={{textDecoration: 'none', color: 'black'}}>FASHION</NavLink></li>
+                        <li  onClick={musicAnimation}><NavLink className="main-menu-item" to="/music" style={{textDecoration: 'none', color: 'black'}}>MUSIC</NavLink></li>
                     </ul>
                 </div>
                 <div className="additional-menu" id="additional-menu" style={{zIndex: 2}}>
@@ -179,7 +181,7 @@ class MainPage extends Component {
 
 
                 <div className="social-container">
-                    <a href='https://www.instagram.com/pasikamagazine/'><img className="insta" src={require(".././icons/INSTA.svg")} style={{zIndex: 1}}/></a>
+                    <a  target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/pasikamagazine/'><img className="insta" src={require(".././icons/INSTA.svg")} style={{zIndex: 1}}/></a>
                     <a><img className="facebook" src={require(".././icons/FACE.svg")} style={{zIndex: 1}} /></a>
                 </div>
 
