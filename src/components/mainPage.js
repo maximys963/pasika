@@ -74,7 +74,7 @@ class MainPage extends Component {
                     for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
                         menuMenuItems[0].childNodes[i].childNodes[0].style.color = "white"
                     }
-                    menu.style.transform = "translateX(790px)";
+                    menu.style.transform = "translateX(88%)";
                     // menu.style.zIndex = "-1";
                     this.setState({
                         menuIsOpened: true,
@@ -98,9 +98,6 @@ class MainPage extends Component {
                         menuIsOpened: false,
                     })
                 }
-
-
-
         };
 
         const searchMove  = () =>{
@@ -133,20 +130,13 @@ class MainPage extends Component {
                     searchIsOpen: false,
                 })
             }
-
-
-
-
-
         };
-
-
 
         return (
             <div className="main-page-container" >
                 <div className="menu-container" style={{zIndex: 4}} >
                     <h2 id="pasika" onClick={pasikaAnimation} >PASIKA</h2>
-                    <p id="magazine">MAGAZINE</p>
+                    <p id="magazine">magazine</p>
                     <ul className='menu'>
                         <li  onClick={artAnimation}><NavLink className="main-menu-item"  to="/art" style={{textDecoration: 'none', color: 'black'}}>ART</NavLink></li>
                         <li  onClick={fashionAnimation}><NavLink className="main-menu-item"  to="/fashion" style={{textDecoration: 'none', color: 'black'}}>FASHION</NavLink></li>
@@ -156,8 +146,8 @@ class MainPage extends Component {
                 <div className="additional-menu" id="additional-menu" style={{zIndex: 2, backgroundImage: `url(${Background})`}}>
                     <img onClick={menuMove}  className="additional-menu-icon" src={require(".././icons/Button menu light.svg")} style={{zIndex: 3}} />
                     <ul className="additional-menu-items">
-                        <li><a >CONTACTS</a></li>
-                        <li><a >ABOUT US</a></li>
+                        <li><NavLink to='/contacts' style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >CONTACTS</NavLink></li>
+                        <li><NavLink to='/aboutus'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >ABOUT US</NavLink></li>
                     </ul>
                 </div>
                 <div className="search" id="search" style={{zIndex: 1, backgroundImage: `url(${SearchBeckground})`}} >

@@ -3,11 +3,6 @@ html, body {
     overflow-x: hidden;
 }
 
-@keyframes ArtAnimation {
-
-}
-
-
 .main-page-container{
     display: flex;
     flex-direction: column;
@@ -89,6 +84,10 @@ align-items: center;
 cursor: pointer;
 transition: color 1s ease;
 animation-delay: 1.5s;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+font-size: 28px;
+
 }
 
 .menu-container > p{
@@ -99,6 +98,9 @@ justify-content: center;
 align-items: center;
 transition: color 1s ease;
 animation-delay: 1.5s;
+font-family: 'Montserrat', sans-serif;
+font-weight: 200;
+font-size: 19px;
 }
 
 .menu{
@@ -110,6 +112,7 @@ animation-delay: 1.5s;
     padding-left: 15px;
     cursor: pointer;
     transition: color 4s ease;
+    margin-top: -1px;
 }
 .menu > li{
     transition: color 1s ease;
@@ -124,6 +127,8 @@ animation-delay: 1.5s;
 .main-menu-item{
     transition: color 1s ease;
     animation-delay: 1.5s;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.8;
 }
 
 /* left menu */
@@ -160,7 +165,9 @@ animation-delay: 1.5s;
     margin-left: 20px;
     margin-right: 20px;
 }
-
+.additional-menu-link{
+    font-family: 'Montserrat', sans-serif;
+}
 
 .additional-menu-icon{
     transform: scale(-1, 1);
@@ -186,8 +193,18 @@ animation-delay: 1.5s;
 }
 .search-input{
     margin-right: 150px;
-    height: 40px;
     border: none;
+    line-height: 28px;
+    border-bottom: 2px solid #d8d8d8;
+    font-size: 26px;
+    width: 220px;
+    padding-left: 15px;
+}
+::placeholder {
+    color: #d8d8d8;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
 }
 
 .search-icon{
