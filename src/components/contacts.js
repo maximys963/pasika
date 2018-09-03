@@ -1,13 +1,25 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
+
+
+const Information = styled.p`
+width: 500px;
+`;
+
+const Container = styled.div`
+display: flex,
+flex direction: column;
+`;
+
 
 class Contacts extends Component {
     render() {
         return (
-            <div>
+            <Container>
                 <h1>Contacts</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda at debitis dicta doloribus eaque fuga fugiat, fugit impedit ipsam iste itaque magni natus officiis praesentium quaerat quam ratione saepe sapiente sed! Consequatur dicta eum explicabo necessitatibus officia officiis tenetur!</p>
-            </div>
+                <Information>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda at debitis dicta doloribus eaque fuga fugiat, fugit impedit ipsam iste itaque magni natus officiis praesentium quaerat quam ratione saepe sapiente sed! Consequatur dicta eum explicabo necessitatibus officia officiis tenetur!</Information>
+            </Container>
         );
     }
 }
