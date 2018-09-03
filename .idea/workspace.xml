@@ -7,10 +7,6 @@
     <list default="true" id="d46c4ef1-53df-4f6f-b8c7-560470d1c985" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/aboutUs.js" afterPath="$PROJECT_DIR$/src/components/aboutUs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/contacts.js" afterPath="$PROJECT_DIR$/src/components/contacts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/fashion.js" afterPath="$PROJECT_DIR$/src/components/fashion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,8 +59,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="340">
+              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -200,11 +196,6 @@
             <path>
               <item name="pasika" type="b2602c69:ProjectViewProjectNode" />
               <item name="pasika" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pasika" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pasika" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -264,12 +255,12 @@
       <workItem from="1535742977944" duration="45081000" />
       <workItem from="1535966687593" duration="61000" />
       <workItem from="1535966819743" duration="12713000" />
-      <workItem from="1535999786248" duration="2240000" />
+      <workItem from="1535999786248" duration="3103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78872000" />
+    <option name="totallyTimeSpent" value="79735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
@@ -664,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="340">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
