@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 const Information = styled.p`
-width: 500px;
+width: 600px;
 `;
 
 const Container = styled.div`
