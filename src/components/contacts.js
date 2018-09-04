@@ -15,13 +15,23 @@ flex direction: column;
 font-family: 'Montserrat', sans-serif;
 `;
 
+const Refs = styled.a`
+text-decoration: none;
+color: black;
+`;
 
 class Contacts extends Component {
     render() {
         return (
             <Container>
                 <h1>Contacts</h1>
-                <Information>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda at debitis dicta doloribus eaque fuga fugiat, fugit impedit ipsam iste itaque magni natus officiis praesentium quaerat quam ratione saepe sapiente sed! Consequatur dicta eum explicabo necessitatibus officia officiis tenetur!</Information>
+                <Information>
+                    Contacts/
+                    For submissions, advertisements, new collaborations - pasikamagazine@gmail.com
+                    To buy the digital issue, please, contact our editor-in-chief  Shamray Alexandra - shamray.alexandra@gmail.com
+                    Write us also in direct messages in Instagram - <Refs target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/pasikamagazine/'><strong>@pasikamagazine </strong></Refs>
+                    Follow us in <Refs target="_blank" rel="noopener noreferrer"  href="https://www.youtube.com/channel/UC-3WBbqNGyK_2YSCoFEEs6w?view_as=subscriber"><strong>YouTube</strong></Refs>
+                </Information>
             </Container>
         );
     }

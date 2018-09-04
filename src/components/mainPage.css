@@ -173,7 +173,7 @@ font-size: 19px;
     transform: scale(-1, 1);
     width: 45px;
     height: 45px;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 .search{
     position: absolute;
@@ -212,7 +212,7 @@ font-size: 19px;
     height: 40px;
     position: absolute;
     top: 60px;
-    right: 30px;
+    right: 25px;
 
 }
 /* container for social media refs*/
@@ -245,6 +245,16 @@ font-size: 19px;
 }
 .facebook:active{
     opacity: 0.5;
+}
+.copyright-container{
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 

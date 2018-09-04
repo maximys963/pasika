@@ -170,11 +170,12 @@ class MainPage extends Component {
                     <div className="art-brace" id="art-brace" style={{zIndex:this.state.zIndexArt}}> </div>
                 </div>
 
-
-
                 <div className="social-container">
                     <a  target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/pasikamagazine/'><img className="insta" src={require(".././icons/INSTA.svg")} style={{zIndex: 1}}/></a>
                     <a><img className="facebook" src={require(".././icons/FACE.svg")} style={{zIndex: 1}} /></a>
+                </div>
+                <div className="copyright-container">
+                <p className="copyright">(c) PASIKA magazine </p>
                 </div>
 
 
