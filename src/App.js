@@ -6,6 +6,9 @@ import Music from './components/music';
 import Fashion from './components/fashion'
 import AboutUs from './components/aboutUs'
 import Contacts from './components/contacts'
+import Issues from './components/issues'
+import HoneyDew from './components/honeydew'
+import Submitting from './components/submitting'
 
 class App extends Component {
   render() {
@@ -20,6 +23,9 @@ class App extends Component {
               <Route path='/fashion' component={Fashion}/>
               <Route path="/aboutus" component={AboutUs}/>
               <Route path="/contacts" component={Contacts}/>
+              <Route path="/issues" component={Issues}/>
+              <Route path="/honeydew" component={HoneyDew}/>
+              <Route path="/submitting" component={Submitting}/>
             </Switch>
           </div>
         </Router>

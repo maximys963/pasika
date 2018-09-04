@@ -4,12 +4,15 @@ import styled from 'styled-components'
 
 
 const Information = styled.p`
-width: 600px;
+width: 45%;
+font-family: 'Montserrat', sans-serif;
+ line-height: 22px;
 `;
 
 const Container = styled.div`
 display: flex,
 flex direction: column;
+font-family: 'Montserrat', sans-serif;
 `;
 
 

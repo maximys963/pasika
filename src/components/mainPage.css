@@ -2,7 +2,6 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
 .main-page-container{
     display: flex;
     flex-direction: column;
@@ -22,7 +21,7 @@ html, body {
 .art-container{
     background-color: #ededed;
     height: 700px;
-    filter: drop-shadow(0 1px 5px rgba(0,0,0,.5));
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
     transition: width 1.5s ease;
 }
 .music-art{
@@ -33,7 +32,7 @@ html, body {
 .music-container{
     background-color: #dcdcdc;
     height: 700px;
-    filter: drop-shadow(0 1px 5px rgba(0,0,0,.5));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
     transition: width 1.5s ease;
 }
 .music-brace{
@@ -135,13 +134,13 @@ font-size: 19px;
 .additional-menu{
     position: absolute;
     top:20px;
-    left:-62%;
+    left: -62%;
     height: 120px;
     width: 70%;
-    filter: drop-shadow(0 5px 5px rgba(0,0,0,.5));
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
     display: flex;
-    background-size: auto;
-    background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
@@ -162,11 +161,12 @@ font-size: 19px;
 
 .additional-menu-items > li{
     margin-bottom: 16px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 11px;
+    margin-right: 11px;
 }
 .additional-menu-link{
     font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
 }
 
 .additional-menu-icon{
@@ -182,7 +182,7 @@ font-size: 19px;
     background-color: white;
     height: 120px;
     width: 70%;
-    filter: drop-shadow(0 5px 5px rgba(0,0,0,.5));
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
     display: flex;
     justify-content: flex-end;
     align-items: center;

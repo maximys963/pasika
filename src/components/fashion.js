@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 const Information = styled.p`
-width: 900px;
+width: 80%;
+font-family: 'Montserrat', sans-serif;
+ line-height: 22px;
 `;
 
 const Container = styled.div`
@@ -12,6 +14,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center
+font-family: 'Montserrat', sans-serif;
 `;
 
 

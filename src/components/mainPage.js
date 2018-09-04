@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {Link, NavLink} from 'react-router-dom'
 import "./mainPage.css"
-import Background from '.././icons/Rectangle.svg'
-import SearchBeckground from '.././icons/Search Rectangle.svg'
 
 class MainPage extends Component {
     constructor(props){
@@ -143,14 +141,17 @@ class MainPage extends Component {
                         <li  onClick={musicAnimation}><NavLink className="main-menu-item" to="/music" style={{textDecoration: 'none', color: 'black'}}>MUSIC</NavLink></li>
                     </ul>
                 </div>
-                <div className="additional-menu" id="additional-menu" style={{zIndex: 2, backgroundImage: `url(${Background})`}}>
+                <div className="additional-menu" id="additional-menu" style={{zIndex: 2,}}>
                     <img onClick={menuMove}  className="additional-menu-icon" src={require(".././icons/Button menu light.svg")} style={{zIndex: 3}} />
                     <ul className="additional-menu-items">
-                        <li><NavLink to='/contacts' style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >CONTACTS</NavLink></li>
-                        <li><NavLink to='/aboutus'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >ABOUT US</NavLink></li>
+                        <li><NavLink onClick={pasikaAnimation} to='/aboutus'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >ABOUT US</NavLink></li>
+                        <li><NavLink onClick={pasikaAnimation} to='/issues'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >ISSUES</NavLink></li>
+                        <li><NavLink onClick={pasikaAnimation} to='/submitting'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >SUBMITTING</NavLink></li>
+                        <li><NavLink onClick={pasikaAnimation} to='/honeydew'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >HONEYDEW</NavLink></li>
+                        <li><NavLink onClick={pasikaAnimation} to='/contacts' style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >CONTACTS</NavLink></li>
                     </ul>
                 </div>
-                <div className="search" id="search" style={{zIndex: 1, backgroundImage: `url(${SearchBeckground})`}} >
+                <div className="search" id="search" style={{zIndex: 1,}} >
                     <input className="search-input" placeholder="search..."/>
                 </div>
                 <img onClick={searchMove} className="search-icon" id="search-icon" src={require(".././icons/musica-searcher.svg")} style={{zIndex: 2}} />
