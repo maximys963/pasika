@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 const Information = styled.p`
-width: 45%;
+width: 40%;
 font-family: 'Montserrat', sans-serif;
  line-height: 22px;
 `;
@@ -26,7 +26,6 @@ class Contacts extends Component {
             <Container>
                 <h1>Contacts</h1>
                 <Information>
-                    Contacts/
                     For submissions, advertisements, new collaborations - pasikamagazine@gmail.com
                     To buy the digital issue, please, contact our editor-in-chief  Shamray Alexandra - shamray.alexandra@gmail.com
                     Write us also in direct messages in Instagram - <Refs target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/pasikamagazine/'><strong>@pasikamagazine </strong></Refs>

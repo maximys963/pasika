@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 const Information = styled.p`
-width: 45%;
+width: 40%;
 font-family: 'Montserrat', sans-serif;
  line-height: 22px;
 `;

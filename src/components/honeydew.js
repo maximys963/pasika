@@ -19,7 +19,7 @@ font-family: 'Montserrat', sans-serif;
 `;
 
 const ContentContainer = styled.div`
-width:45%
+width: 40%;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
