@@ -21,13 +21,14 @@ class App extends Component {
         <Router>
               <div className="App">
                 <MainPage/>
-                <Route render={()=> (
+                <Route render={({location})=> (
                 <TransitionGroup>
                   <CSSTransition
-                      timeout={1000}
+                      timeout={3000}
                       classNames="fade"
+                      key={location.key}
                   >
-                    <Switch >
+                    <Switch location={location} >
                       <Route exact path='/'/>
                       <Route path='/art' component={Art}/>
                       <Route path='/music' component={Music}/>

@@ -13,6 +13,10 @@ const Container = styled.div`
 display: flex,
 flex direction: column;
 font-family: 'Montserrat', sans-serif;
+ position: absolute;
+    top: 150px;
+    left: 8px;
+    right: 0;
 `;
 
 class Submitting extends Component {
