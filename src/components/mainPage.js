@@ -175,12 +175,8 @@ class MainPage extends Component {
                     <a><img className="facebook" src={require(".././icons/FACE.svg")} style={{zIndex: 1}} /></a>
                 </div>
                 <div className="copyright-container">
-                <p className="copyright">(c) PASIKA magazine </p>
+                <p className="copyright">(c) 2018 PASIKA magazine. All rights reserved</p>
                 </div>
-
-
-
-
             </div>
         );
     }

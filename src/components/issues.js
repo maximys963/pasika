@@ -10,6 +10,9 @@ font-family: 'Montserrat', sans-serif;
 `;
 
 const Container = styled.div`
+position: absolute;
+top: 150px;
+right: 5px;
 width: 100%;
 display: flex;
 flex-direction: row;

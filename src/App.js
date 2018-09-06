@@ -9,6 +9,7 @@ import Contacts from './components/contacts'
 import Issues from './components/issues'
 import HoneyDew from './components/honeydew'
 import Submitting from './components/submitting'
+import NoFound from './components/404NoFound'
 import {
   TransitionGroup,
   CSSTransition
@@ -24,7 +25,7 @@ class App extends Component {
                 <Route render={({location})=> (
                 <TransitionGroup>
                   <CSSTransition
-                      timeout={3000}
+                      timeout={1500}
                       classNames="fade"
                       key={location.key}
                   >
@@ -38,6 +39,7 @@ class App extends Component {
                       <Route path="/issues" component={Issues}/>
                       <Route path="/honeydew" component={HoneyDew}/>
                       <Route path="/submitting" component={Submitting}/>
+                      <Route component={NoFound}/>
                     </Switch>
                   </CSSTransition>
                 </TransitionGroup>

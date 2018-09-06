@@ -9,10 +9,10 @@ font-family: 'Montserrat', sans-serif;
 `;
 
 const Container = styled.div`
- position: absolute;
-    top: 150px;
-    left: 0;
-    right: 0;
+position: absolute;
+top: 150px;
+left: 8px;
+right: 0;
 width: 100%
 display: flex;
 flex-direction: column;

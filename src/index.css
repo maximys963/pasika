@@ -1,25 +1,21 @@
 .fade-appear,
-.fade-enter{
+.fade-enter {
     opacity: 0;
     z-index: 1;
 }
 .fade-appear-active,
-.fade-enter .fade-enter-active {
+.fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 1000ms ease-in;
+    transition: opacity 400ms ease-in;
 }
 
 .fade-exit {
     opacity: 1;
 }
-.fade-exit .fade-exit-active{
+
+.fade-exit.fade-exit-active {
     opacity: 0;
-    transition: opacity 1500ms ease-in;
+    transition: opacity 200ms linear;
 }
-.page{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
+
 

@@ -111,7 +111,7 @@ font-size: 19px;
     padding-left: 15px;
     cursor: pointer;
     transition: color 4s ease;
-    margin-top: -1px;
+    margin-top: -2px;
 }
 .menu > li{
     transition: color 1s ease;
@@ -249,7 +249,7 @@ font-size: 19px;
 .copyright-container{
     width: 100%;
     position: absolute;
-    bottom: 25px;
+    bottom: -15px;
     left: 0;
     display: flex;
     flex-direction: row;
