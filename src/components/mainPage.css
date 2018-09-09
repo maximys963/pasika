@@ -8,6 +8,16 @@ html, body {
     justify-content: flex-start;
     align-items: center;
 }
+#pasika{
+    cursor: pointer;
+}
+#pasika:hover{
+    opacity: 0.8;
+}
+#pasika:active{
+    opacity: 0.5;
+}
+
 /* central part */
 .fashion-container{
     background-color: #d8d8d8;
@@ -169,11 +179,27 @@ font-size: 19px;
     white-space: nowrap;
 }
 
+.additional-menu-link:hover{
+   opacity: 0.8;
+}
+
+.additional-menu-link:active{
+    opacity: 0.5;
+}
+
+
 .additional-menu-icon{
     transform: scale(-1, 1);
     width: 45px;
     height: 45px;
     margin-right: 40px;
+    cursor: pointer;
+}
+.additional-menu-icon:hover {
+    opacity: 0.8;
+}
+.additional-menu-icon:active {
+    opacity: 0.5;
 }
 .search{
     position: absolute;
@@ -213,7 +239,13 @@ font-size: 19px;
     position: absolute;
     top: 60px;
     right: 25px;
-
+    cursor: pointer;
+}
+.search-icon:hover{
+    opacity: 0.8;
+}
+.search-icon:active{
+    opacity: 0.5;
 }
 /* container for social media refs*/
 .social-container{

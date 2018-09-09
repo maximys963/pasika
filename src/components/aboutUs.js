@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 
@@ -17,7 +16,7 @@ top: 150px;
 left: 8px;
 right: 0;
 display: flex,
-flex direction: column;
+flex-direction: column;
 font-family: 'Montserrat', sans-serif;
  
 `;

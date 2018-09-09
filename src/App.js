@@ -10,6 +10,7 @@ import Issues from './components/issues'
 import HoneyDew from './components/honeydew'
 import Submitting from './components/submitting'
 import NoFound from './components/404NoFound'
+import Covers from './components/covers'
 import {
   TransitionGroup,
   CSSTransition
@@ -30,7 +31,7 @@ class App extends Component {
                       key={location.key}
                   >
                     <Switch location={location} >
-                      <Route exact path='/'/>
+                      <Route exact path='/covers' component={Covers}/>
                       <Route path='/art' component={Art}/>
                       <Route path='/music' component={Music}/>
                       <Route path='/fashion' component={Fashion}/>

@@ -36,13 +36,17 @@ class Issues extends Component {
             <Container>
                 <ContentContainer>
                 <h1>Issues</h1>
-                <Information>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusamus adipisci alias amet aperiam aspernatur atque blanditiis corporis distinctio doloremque ducimus ea eaque eligendi error et, eveniet inventore, iure laborum maiores nisi obcaecati odio officia officiis omnis perferendis quasi qui quod reiciendis reprehenderit rerum sequi similique sunt suscipit tenetur, vero voluptatem! Animi assumenda blanditiis dignissimos doloribus esse eum ex labore laboriosam nihil odit quia, quibusdam saepe sit totam voluptate.</Information>
+                <Information>To breathe in art,
+                    <br/>To see through fashion,
+                    <br/>To live with music -
+                    <br/>Read “PASIKA”!
+                    <br/>Only 4€ for the source of originality!
+                    <br/>To buy an issue please write us - <strong>pasikamagazine@gmail.com</strong></Information>
                 </ContentContainer>
             </Container>
         );
     }
 }
 
-Issues.propTypes = {};
 
 export default Issues;

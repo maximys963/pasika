@@ -38,7 +38,20 @@ class HoneyDew extends Component {
             <Container>
                 <ContentContainer>
                 <h1>Honeydew</h1>
-                <Information>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusamus adipisci alias amet aperiam aspernatur atque blanditiis corporis distinctio doloremque ducimus ea eaque eligendi error et, eveniet inventore, iure laborum maiores nisi obcaecati odio officia officiis omnis perferendis quasi qui quod reiciendis reprehenderit rerum sequi similique sunt suscipit tenetur, vero voluptatem! Animi assumenda blanditiis dignissimos doloribus esse eum ex labore laboriosam nihil odit quia, quibusdam saepe sit totam voluptate.</Information>
+                <Information>
+                    The world is full of art. Each of us rides on the swing of life in attempt to feel it,
+                    find it, touch it. Artists find their wings when they jump off the swing and start their own way.
+                    They take this dangerous step, so that we could hold the breath of beauty.
+                    Inspired by unique ideas, modern artists work for different purposes, they have different desires,
+                    different visions, their voices are heard from many parts of the planet (and even more).
+                    But all of them fly to our common house. And this house is Art. This is an improvised PASIKA,
+                    where instead of the bees - the best artists of our time,
+                    where  instead of honey - contemporary artworks, and there are no beekeepers at all.
+
+                    In this column we want to learn more about the artists who surprise us with their vision.
+                    We want to communicate with personalities whose works have already begun to speak with our hearts.
+                    Honeydew - the artist of the month. Modern artist. Infinite artist!
+                </Information>
                 </ContentContainer>
             </Container>
         );
