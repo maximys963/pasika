@@ -31,7 +31,7 @@ class App extends Component {
                       key={location.key}
                   >
                     <Switch location={location} >
-                      <Route exact path='/covers' component={Covers}/>
+                      <Route exact path='/' component={Covers}/>
                       <Route path='/art' component={Art}/>
                       <Route path='/music' component={Music}/>
                       <Route path='/fashion' component={Fashion}/>

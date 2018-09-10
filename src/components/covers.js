@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
+
 
 const Container = styled.div`
 position: absolute;
@@ -15,20 +17,21 @@ font-family: 'Montserrat', sans-serif;
 `;
 
 const Image = styled.img`
-width: 25%;
+border: 0;
+width: 100%;
 height: 500px;
-margin-left: 10px;
-margin-right: 10px;
-background: white
+background: white;
+&:hover{opacity: 0.8};
+&:active{opacity: 0.5};
 `;
 
 class Covers extends Component {
     render() {
         return (
             <Container>
-                <Image/>
-                <Image/>
-                <Image/>
+                <NavLink to="/issues" style={{width: "25%", marginLeft: "10px", marginRight: "10px" }}><Image/></NavLink>
+                <NavLink to="/issues" style={{width: "25%",  marginLeft: "10px", marginRight: "10px" }}><Image/></NavLink>
+                <NavLink to="/issues" style={{width: "25%",  marginLeft: "10px", marginRight: "10px" }}><Image/></NavLink>
             </Container>
         );
     }

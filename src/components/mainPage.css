@@ -10,6 +10,8 @@ html, body {
 }
 #pasika{
     cursor: pointer;
+    transition: color 1s ease;
+    animation-delay: 1.5s;
 }
 #pasika:hover{
     opacity: 0.8;
@@ -281,12 +283,16 @@ font-size: 19px;
 .copyright-container{
     width: 100%;
     position: absolute;
-    bottom: -15px;
+    bottom: 0;
     left: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+}
+.copyright{
+    margin-bottom: 0;
 }
 
 

@@ -133,7 +133,7 @@ class MainPage extends Component {
         return (
             <div className="main-page-container" >
                 <div className="menu-container" style={{zIndex: 4}} >
-                    <h2 id="pasika" onClick={pasikaAnimation} >PASIKA</h2>
+                    <h2 ><NavLink onClick={pasikaAnimation} id="pasika" style={{textDecoration: 'none', color: 'black' }} to="/">PASIKA</NavLink></h2>
                     <p id="magazine">magazine</p>
                     <ul className='menu'>
                         <li  onClick={artAnimation}><NavLink className="main-menu-item"  to="/art" style={{textDecoration: 'none', color: 'black'}}>ART</NavLink></li>
