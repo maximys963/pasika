@@ -6,6 +6,9 @@ const Information = styled.p`
 width: 80%;
 font-family: 'Montserrat', sans-serif;
  line-height: 22px;
+ @media (max-width:320px){
+    margin-top:0;
+    }
 `;
 
 const Container = styled.div`
@@ -19,6 +22,10 @@ flex-direction: column;
 justify-content: center;
 align-items: center
 font-family: 'Montserrat', sans-serif;
+@media (max-width:320px){
+    margin-top:140px;
+    left: 0;
+    }
 `;
 
 class Art extends Component {

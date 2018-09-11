@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 const SubTitle = styled.div`
-width: 40%;
+width: 95%;
 font-family: 'Montserrat', sans-serif;
  line-height: 22px;
 `;
@@ -14,6 +14,9 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+@media (max-width:320px){
+    width: 100%
+    }
 `;
 const ArrowLeft = styled.img`
 width: 30px;
@@ -31,20 +34,50 @@ cursor: pointer;
 
 
 
+const Title = styled.h1`
+margin-bottom: 0;
+text-align: center;
+`
+
+
 const Information = styled.p`
 width: 40%;
 font-family: 'Montserrat', sans-serif;
  line-height: 22px;
+ @media (max-width:320px){
+    width: 95%;
+    margin-left: 0;
+    }
 `;
 
 const Container = styled.div`
-display: flex,
-flex direction: column;
+position: absolute;
+top: 150px;
+left: 8px;
+right: 0;
+display: flex;
+flex-direction: column;
 font-family: 'Montserrat', sans-serif;
- position: absolute;
-    top: 150px;
-    left: 8px;
-    right: 0;
+@media (max-width:320px){
+    margin-top:145px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    }
+`;
+
+const ContentContainer = styled.div`
+width: 40%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+@media (max-width:320px){
+    width: 95%
+    align-items: center;
+    margin-top: 10px;
+    }
+
 `;
 
 class Submitting extends Component {
@@ -107,12 +140,12 @@ class Submitting extends Component {
     render() {
         return (
             <Container>
-                <h1>Submission for Web Editorials</h1>
+                <Title>Submission for Web Editorials</Title>
                     {this.state.infromationArr.slice(this.state.currentPage, this.state.currentPage+1).map((element)=>(
-                        <div>
+                        <ContentContainer>
                         <SubTitle>{element.title}</SubTitle>
                         <Information>{element.text}</Information>
-                        </div>
+                        </ContentContainer>
                     ))}
                 <ArrowContainer>
                     <ArrowLeft src={require(".././icons/right-arrow.svg")} onClick={this.ChangePageDown} />

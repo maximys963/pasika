@@ -295,6 +295,77 @@ font-size: 19px;
     margin-bottom: 0;
 }
 
+/*adaptive solutions----------------------------------------------------*/
+
+
+
+@media screen and (max-width: 320px){
+    .additional-menu{
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        flex-direction: column-reverse;
+        height: inherit
+    }
+    .additional-menu-items{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .additional-menu-icon{
+        display: none;
+    }
+    .menu-container{
+        width: 21%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-container > h2{
+      margin-top: 0;        
+    }
+    .menu-container > p{
+        margin-bottom: 10px;    
+    }
+    .search-icon{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .curtains-music-container{
+        height:1000px;
+    }
+    .music-container{
+        height: 1000px;
+    }
+    .curtains-art-container{
+        height:1000px;
+    }
+    .art-container{
+        height:1000px;
+    }
+    .fashion-container{
+        height:1000px;
+    }
+    .copyright-container{
+        bottom: -425px;
+        left: 0;
+        font-size: 0.8rem;
+    }
+    .social-container{
+        bottom: -410px;
+
+}}
+
+
+
+
 
 
 

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
+const Title = styled.h1`
+margin-bottom: 0;
+`
 
 
 
@@ -41,6 +44,12 @@ flex-direction: row;
 align-items: center ;
 justify-content: flex-end;
 font-family: 'Montserrat', sans-serif;
+@media (max-width:320px){
+    margin-top:145px;
+    right: 0;
+    justify-content: center;
+    
+    }
 `;
 
 const ContentContainer = styled.div`
@@ -49,6 +58,10 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content: center;
+@media (max-width:320px){
+    width: 95%
+    align-items: center;
+     }
 
 `;
 
@@ -97,7 +110,7 @@ class HoneyDew extends Component {
         return (
             <Container>
                 <ContentContainer>
-                <h1>Honeydew</h1>
+                <Title>Honeydew</Title>
                 <Information>
                     {this.state.infromationArr.slice(this.state.currentPage, this.state.currentPage+1).map((element)=>(
                         <div>

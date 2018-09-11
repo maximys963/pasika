@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
+const Title = styled.h1`
+margin-bottom: 0;
+`
 
 const Information = styled.p`
 width: 100%;
@@ -19,6 +22,11 @@ flex-direction: row;
 align-items: center ;
 justify-content: flex-end;
 font-family: 'Montserrat', sans-serif;
+@media (max-width:320px){
+    margin-top:145px;
+    right: 0;
+    justify-content: center;
+    }
 `;
 
 const ContentContainer = styled.div`
@@ -27,6 +35,10 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content: center;
+@media (max-width:320px){
+    width: 95%
+    align-items: center;
+    }
 
 `;
 
@@ -35,7 +47,7 @@ class Issues extends Component {
         return (
             <Container>
                 <ContentContainer>
-                <h1>Issues</h1>
+                <Title>Issues</Title>
                 <Information>To breathe in art,
                     <br/>To see through fashion,
                     <br/>To live with music -

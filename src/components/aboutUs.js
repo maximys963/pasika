@@ -2,12 +2,21 @@ import React, {Component} from 'react';
 import styled from 'styled-components'
 
 
+const Title = styled.h1`
+margin-bottom: 0;
+text-align: center;
+`
+
+
 const Information = styled.p`
 width: 40%;
 font-family: 'Montserrat', sans-serif;
  line-height: 22px;
+ @media (max-width:320px){
+    width: 95%;
+    margin-left: 0;
 
-
+    }
 `;
 
 const Container = styled.div`
@@ -15,17 +24,26 @@ position: absolute;
 top: 150px;
 left: 8px;
 right: 0;
-display: flex,
+display: flex;
 flex-direction: column;
 font-family: 'Montserrat', sans-serif;
- 
+@media (max-width:320px){
+    margin-top:145px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    }
 `;
+
 const ArrowContainer = styled.div`
 width: 40%;
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+@media (max-width:320px){
+    width: 100%
+    }
 `;
 const ArrowLeft = styled.img`
 width: 30px;
@@ -75,7 +93,7 @@ class AboutUs extends Component {
     render() {
         return (
             <Container>
-                <h1>About us</h1>
+                <Title>About us</Title>
                 <Information>{this.state.infromationArr.slice(this.state.currentPage, this.state.currentPage+1 )}</Information>
                 <ArrowContainer>
                     <ArrowLeft src={require(".././icons/right-arrow.svg")} onClick={this.ChangePageDown} />
