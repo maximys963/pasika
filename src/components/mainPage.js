@@ -10,16 +10,14 @@ class MainPage extends Component {
            musicBlockWidth: "50%",
            zIndexArt: "-3",
            zIndexMusic: "-2",
-           menuIsOpened: false,
+           menuIsOpened: true,
            searchIsOpen: false
         }
     }
 
-
     render() {
         const musicAnimation = () => {
            const musicBrace =  document.getElementById('music-brace');
-           const artBrace = document.getElementById('art-brace');
            musicBrace.style.display = 'none';
            this.setState({
                zIndexMusic: "-2",
@@ -27,13 +25,10 @@ class MainPage extends Component {
                musicBlockWidth: "100%",
                artBlockWidth: "0"
            });
-            // artBrace.style.display = 'block';
-
         };
 
         const artAnimation = () => {
             const artBrace = document.getElementById('art-brace');
-            const musicBrace =  document.getElementById('music-brace');
             artBrace.style.display = 'none';
             this.setState({
                 zIndexMusic: "-3",
@@ -41,8 +36,6 @@ class MainPage extends Component {
                 artBlockWidth: "100%",
                 musicBlockWidth: "0"
             });
-            // musicBrace.style.display = 'block';
-
         };
 
         const fashionAnimation = () =>{
@@ -51,6 +44,7 @@ class MainPage extends Component {
                 artBlockWidth : "6%"
             })
         };
+
         const pasikaAnimation = () =>{
           this.setState({
               musicBlockWidth: "50%",
@@ -63,8 +57,6 @@ class MainPage extends Component {
                 const title = document.getElementById('pasika');
                 const magazine = document.getElementById('magazine');
                 const menuMenuItems = document.getElementsByClassName("menu");
-
-
                 if(!this.state.menuIsOpened){
                     title.style.color = "white";
                     magazine.style.color = "white";
@@ -72,8 +64,7 @@ class MainPage extends Component {
                     for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
                         menuMenuItems[0].childNodes[i].childNodes[0].style.color = "white"
                     }
-                    menu.style.transform = "translateX(88%)";
-                    // menu.style.zIndex = "-1";
+                    menu.style.transform = "translateX(0)";
                     this.setState({
                         menuIsOpened: true,
                     });
@@ -85,19 +76,17 @@ class MainPage extends Component {
                         });
                     }
                 }else{
-                    menu.style.transform = "translateX(0)";
+                    menu.style.transform = "translateX(-88%)";
                     title.style.color = "black";
                     magazine.style.color = "black";
                     for (let i = 0; i <  menuMenuItems[0].childNodes.length; i++) {
                         menuMenuItems[0].childNodes[i].childNodes[0].style.color = "black"
                     }
-                    // menu.style.zIndex = "2";
                     this.setState({
                         menuIsOpened: false,
                     })
                 }
         };
-
         const searchMove  = () =>{
             const searchBar = document.getElementById("search");
             const title = document.getElementById('pasika');
@@ -131,14 +120,14 @@ class MainPage extends Component {
         };
 
         return (
-            <div className="main-page-container" >
+            <div className="main-page-container">
                 <div className="menu-container" style={{zIndex: 4}} >
-                    <h2 ><NavLink onClick={pasikaAnimation} id="pasika" style={{textDecoration: 'none', color: 'black' }} to="/">PASIKA</NavLink></h2>
-                    <p id="magazine">magazine</p>
+                    <h2 ><NavLink onClick={pasikaAnimation} id="pasika" style={{textDecoration: 'none', color: 'white' }} to="/">PASIKA</NavLink></h2>
+                    <p id="magazine" style={{textDecoration: 'none', color: 'white' }}>magazine</p>
                     <ul className='menu'>
-                        <li  onClick={artAnimation}><NavLink className="main-menu-item"  to="/art" style={{textDecoration: 'none', color: 'black'}}>ART</NavLink></li>
-                        <li  onClick={fashionAnimation}><NavLink className="main-menu-item"  to="/fashion" style={{textDecoration: 'none', color: 'black'}}>FASHION</NavLink></li>
-                        <li  onClick={musicAnimation}><NavLink className="main-menu-item" to="/music" style={{textDecoration: 'none', color: 'black'}}>MUSIC</NavLink></li>
+                        <li  onClick={artAnimation}><NavLink className="main-menu-item"  to="/art" style={{textDecoration: 'none', color: 'white'}}>ART</NavLink></li>
+                        <li  onClick={fashionAnimation}><NavLink className="main-menu-item"  to="/fashion" style={{textDecoration: 'none', color: 'white'}}>FASHION</NavLink></li>
+                        <li  onClick={musicAnimation}><NavLink className="main-menu-item" to="/music" style={{textDecoration: 'none', color: 'white'}}>MUSIC</NavLink></li>
                     </ul>
                 </div>
                 <div className="additional-menu" id="additional-menu" style={{zIndex: 2,}}>
@@ -157,9 +146,6 @@ class MainPage extends Component {
                 <img onClick={searchMove} className="search-icon" id="search-icon" src={require(".././icons/musica-searcher.svg")} style={{zIndex: 2}} />
                     <div className="fashion-container" style={{zIndex: -4}}>
                     </div>
-
-
-
                 <div className="curtains-music-container" id="curtains-music-container"  style={{zIndex: this.state.zIndexMusic}} >
                     <div className="music-container" id="music" style={{zIndex: this.state.zIndexMusic, width: this.state.musicBlockWidth}}> </div>
                     <div className="music-brace" id="music-brace" style={{zIndex: this.state.zIndexMusic}}> </div>

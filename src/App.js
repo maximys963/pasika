@@ -11,6 +11,7 @@ import HoneyDew from './components/honeydew'
 import Submitting from './components/submitting'
 import NoFound from './components/404NoFound'
 import Covers from './components/covers'
+import RegistrationScreen from './components/registrationScreen'
 import {
   TransitionGroup,
   CSSTransition
@@ -35,11 +36,12 @@ class App extends Component {
                       <Route path='/art' component={Art}/>
                       <Route path='/music' component={Music}/>
                       <Route path='/fashion' component={Fashion}/>
-                      <Route path="/aboutus" component={AboutUs}/>
-                      <Route path="/contacts" component={Contacts}/>
-                      <Route path="/issues" component={Issues}/>
-                      <Route path="/honeydew" component={HoneyDew}/>
-                      <Route path="/submitting" component={Submitting}/>
+                      <Route path='/aboutus' component={AboutUs}/>
+                      <Route path='/contacts' component={Contacts}/>
+                      <Route path='/issues' component={Issues}/>
+                      <Route path='/honeydew' component={HoneyDew}/>
+                      <Route path='/submitting' component={Submitting}/>
+                      <Route path='/registration'/>
                       <Route component={NoFound}/>
                     </Switch>
                   </CSSTransition>
