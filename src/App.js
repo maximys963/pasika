@@ -41,7 +41,7 @@ class App extends Component {
                       <Route path='/issues' component={Issues}/>
                       <Route path='/honeydew' component={HoneyDew}/>
                       <Route path='/submitting' component={Submitting}/>
-                      <Route path='/registration'/>
+                      <Route path='/registration' component={RegistrationScreen}/>
                       <Route component={NoFound}/>
                     </Switch>
                   </CSSTransition>

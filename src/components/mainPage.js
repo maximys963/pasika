@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom'
-import "./mainPage.css"
+import {NavLink} from 'react-router-dom';
+import MainMenu from './containers/mainMenu';
+import AditionalMenu from './containers/aditionalMenu';
+import SearchBar from './containers/searchBar'
+import SocialBar from './containers/socialBar'
+import "../styles/mainPage.css"
 
 class MainPage extends Component {
     constructor(props){
@@ -14,7 +18,6 @@ class MainPage extends Component {
            searchIsOpen: false
         }
     }
-
     render() {
         const musicAnimation = () => {
            const musicBrace =  document.getElementById('music-brace');
@@ -26,7 +29,6 @@ class MainPage extends Component {
                artBlockWidth: "0"
            });
         };
-
         const artAnimation = () => {
             const artBrace = document.getElementById('art-brace');
             artBrace.style.display = 'none';
@@ -37,7 +39,6 @@ class MainPage extends Component {
                 musicBlockWidth: "0"
             });
         };
-
         const fashionAnimation = () =>{
             this.setState({
                 musicBlockWidth: "6%",
@@ -104,7 +105,7 @@ class MainPage extends Component {
                     searchIsOpen: true,
                 });
                 if(this.state.menuIsOpened){
-                    menu.style.transform = "translateX(0)";
+                    menu.style.transform = "translateX(-88%)";
                     title.style.color = "black";
                     magazine.style.color = "black";
                     this.setState({
@@ -121,45 +122,40 @@ class MainPage extends Component {
 
         return (
             <div className="main-page-container">
-                <div className="menu-container" style={{zIndex: 4}} >
-                    <h2 ><NavLink onClick={pasikaAnimation} id="pasika" style={{textDecoration: 'none', color: 'white' }} to="/">PASIKA</NavLink></h2>
-                    <p id="magazine" style={{textDecoration: 'none', color: 'white' }}>magazine</p>
-                    <ul className='menu'>
-                        <li  onClick={artAnimation}><NavLink className="main-menu-item"  to="/art" style={{textDecoration: 'none', color: 'white'}}>ART</NavLink></li>
-                        <li  onClick={fashionAnimation}><NavLink className="main-menu-item"  to="/fashion" style={{textDecoration: 'none', color: 'white'}}>FASHION</NavLink></li>
-                        <li  onClick={musicAnimation}><NavLink className="main-menu-item" to="/music" style={{textDecoration: 'none', color: 'white'}}>MUSIC</NavLink></li>
-                    </ul>
-                </div>
-                <div className="additional-menu" id="additional-menu" style={{zIndex: 2,}}>
-                    <img onClick={menuMove}  className="additional-menu-icon" src={require(".././icons/Button menu light.svg")} style={{zIndex: 3}} />
-                    <ul className="additional-menu-items">
-                        <li><NavLink onClick={pasikaAnimation} to='/aboutus'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >ABOUT US</NavLink></li>
-                        <li><NavLink onClick={pasikaAnimation} to='/issues'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >ISSUES</NavLink></li>
-                        <li><NavLink onClick={pasikaAnimation} to='/submitting'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >SUBMITTING</NavLink></li>
-                        <li><NavLink onClick={pasikaAnimation} to='/honeydew'  style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >HONEYDEW</NavLink></li>
-                        <li><NavLink onClick={pasikaAnimation} to='/contacts' style={{textDecoration: 'none', color: 'white'}} className="additional-menu-link" >CONTACTS</NavLink></li>
-                    </ul>
-                </div>
-                <div className="search" id="search" style={{zIndex: 1,}} >
-                    <input className="search-input" placeholder="search..."/>
-                </div>
-                <img onClick={searchMove} className="search-icon" id="search-icon" src={require(".././icons/musica-searcher.svg")} style={{zIndex: 2}} />
-                    <div className="fashion-container" style={{zIndex: -4}}>
-                    </div>
-                <div className="curtains-music-container" id="curtains-music-container"  style={{zIndex: this.state.zIndexMusic}} >
-                    <div className="music-container" id="music" style={{zIndex: this.state.zIndexMusic, width: this.state.musicBlockWidth}}> </div>
-                    <div className="music-brace" id="music-brace" style={{zIndex: this.state.zIndexMusic}}> </div>
+               <MainMenu
+                         pasikaAnimation={pasikaAnimation}
+                         artAnimation={artAnimation}
+                         fashionAnimation={fashionAnimation}
+                         musicAnimation={musicAnimation}/>
+               <AditionalMenu
+                         menuMove={menuMove}
+                         pasikaAnimation={pasikaAnimation}/>
+               <SearchBar searchMove={searchMove}/>
+                <div
+                className="fashion-container"
+                style={{zIndex: -4}}/>
+                <div
+                className="curtains-music-container" id="curtains-music-container"
+                style={{zIndex: this.state.zIndexMusic}}>
+                    <div
+                    className="music-container" id="music"
+                    style={{zIndex: this.state.zIndexMusic, width: this.state.musicBlockWidth}}/>
+                    <div
+                    className="music-brace" id="music-brace"
+                    style={{zIndex: this.state.zIndexMusic}}/>
                 </div>
 
-                <div className="curtains-art-container" id="curtains-art-container"  style={{zIndex:this.state.zIndexArt}} >
-                    <div className="art-container" id="art" style={{zIndex:this.state.zIndexArt, width: this.state.artBlockWidth}}> </div>
-                    <div className="art-brace" id="art-brace" style={{zIndex:this.state.zIndexArt}}> </div>
+                <div
+                className="curtains-art-container" id="curtains-art-container"
+                style={{zIndex:this.state.zIndexArt}}>
+                    <div
+                    className="art-container" id="art"
+                    style={{zIndex:this.state.zIndexArt, width: this.state.artBlockWidth}}/>
+                    <div
+                    className="art-brace" id="art-brace"
+                    style={{zIndex:this.state.zIndexArt}}/>
                 </div>
-
-                <div className="social-container">
-                    <a  target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/pasikamagazine/'><img className="insta" src={require(".././icons/INSTA.svg")} style={{zIndex: 1}}/></a>
-                    <a><img className="facebook" src={require(".././icons/FACE.svg")} style={{zIndex: 1}} /></a>
-                </div>
+               <SocialBar fashionAnimation={fashionAnimation}/>
                 <div className="copyright-container">
                 <p className="copyright">(c) 2018 PASIKA magazine. All rights reserved</p>
                 </div>
