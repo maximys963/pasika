@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
 import MainMenu from './containers/mainMenu';
 import AditionalMenu from './containers/aditionalMenu';
-import SearchBar from './containers/searchBar'
-import SocialBar from './containers/socialBar'
-import "../styles/mainPage.css"
+import SearchBar from './containers/searchBar';
+import SocialBar from './containers/socialBar';
+import BackgroundCurtains from './containers/backgroundCurtains';
+import "../styles/mainPage.css";
 
 class MainPage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            artBlockWidth: "50%",
+           artBlockWidth: "50%",
            musicBlockWidth: "50%",
            zIndexArt: "-3",
            zIndexMusic: "-2",
@@ -130,31 +130,16 @@ class MainPage extends Component {
                <AditionalMenu
                          menuMove={menuMove}
                          pasikaAnimation={pasikaAnimation}/>
-               <SearchBar searchMove={searchMove}/>
-                <div
-                className="fashion-container"
-                style={{zIndex: -4}}/>
-                <div
-                className="curtains-music-container" id="curtains-music-container"
-                style={{zIndex: this.state.zIndexMusic}}>
-                    <div
-                    className="music-container" id="music"
-                    style={{zIndex: this.state.zIndexMusic, width: this.state.musicBlockWidth}}/>
-                    <div
-                    className="music-brace" id="music-brace"
-                    style={{zIndex: this.state.zIndexMusic}}/>
-                </div>
-
-                <div
-                className="curtains-art-container" id="curtains-art-container"
-                style={{zIndex:this.state.zIndexArt}}>
-                    <div
-                    className="art-container" id="art"
-                    style={{zIndex:this.state.zIndexArt, width: this.state.artBlockWidth}}/>
-                    <div
-                    className="art-brace" id="art-brace"
-                    style={{zIndex:this.state.zIndexArt}}/>
-                </div>
+               <SearchBar
+                         searchMove={searchMove}/>
+               <BackgroundCurtains
+                         artBlockWidth={this.state.artBlockWidth}
+                         musicBlockWidth={this.state.musicBlockWidth}
+                         zIndexArt={this.state.zIndexArt}
+                         zIndexMusic={this.state.zIndexMusic}
+                         menuIsOpened={this.state. menuIsOpened}
+                         searchIsOpen={this.state.searchIsOpen}
+                />
                <SocialBar fashionAnimation={fashionAnimation}/>
                 <div className="copyright-container">
                 <p className="copyright">(c) 2018 PASIKA magazine. All rights reserved</p>

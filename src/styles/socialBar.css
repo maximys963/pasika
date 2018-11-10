@@ -1,0 +1,31 @@
+.social-container{
+    position: absolute;
+    left:0;
+    bottom: 40px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-icons{
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.social-icons:hover{
+    opacity: 0.8;
+}
+
+.social-icons:active{
+    opacity: 0.5;
+}
+
+#hive{
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+}
