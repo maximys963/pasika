@@ -25,12 +25,7 @@ class App extends Component {
               <div className="App">
                 <MainPage/>
                 <Route render={({location})=> (
-                <TransitionGroup>
-                  <CSSTransition
-                      timeout={1500}
-                      classNames="fade"
-                      key={location.key}
-                  >
+
                     <Switch location={location} >
                       <Route exact path='/' component={Covers}/>
                       <Route path='/art' component={Art}/>
@@ -44,8 +39,7 @@ class App extends Component {
                       <Route path='/registration' component={RegistrationScreen}/>
                       <Route component={NoFound}/>
                     </Switch>
-                  </CSSTransition>
-                </TransitionGroup>
+
                 )}/>
               </div>
         </Router>

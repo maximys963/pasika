@@ -1,0 +1,55 @@
+.registration-container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.geometry{
+    height: 60px;
+    width: 450px;
+    background-color: white;
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button-geometry{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    height: 50px;
+    margin-top: 20px;
+    width: 200px;
+    background-color: black;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.button-geometry:hover{
+    opacity: 0.8;
+}
+.button-geometry:active{
+    opacity: 1;
+}
+.custom-input{
+    border: none;
+    line-height: 20px;
+    border-bottom: 2px solid #d8d8d8;
+    width: 80%;
+    color: darkgray;
+    font-size: 18px;
+}
+.lable{
+    width: 200px;
+    color: dimgray;
+    height: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
