@@ -20,14 +20,11 @@ class RegistrationScreen extends Component {
 
     }
 
-
     getEmail(e){
-        console.log(e.target.value);
         this.setState({
             emailInput: e.target.value,
         });
     };
-
     getUser(e){
         this.setState({
             userInput: e.target.value,
@@ -66,12 +63,8 @@ class RegistrationScreen extends Component {
         e.target.style.color = '#d8d8d8';
     }
     validation(e){
-        console.log(e.target.id);
        let validationElement = e.target.id;
-
-
        if( validationElement === 'email'){
-           console.log("it works");
          let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
          if(emailRegExp.test(e.target.value)){
              this.setState({
@@ -81,9 +74,7 @@ class RegistrationScreen extends Component {
              this.setState({
                  emailInputValidated: false
              });
-             e.target.style.borderBottom = '2px solid #fab1a0';
-             e.target.style.color = '#fab1a0';
-             alert("invalid email");
+             console.info("trouble with email");
          }
        }
 
@@ -98,11 +89,8 @@ class RegistrationScreen extends Component {
                this.setState({
                    userInputValidated: false
                });
-               e.target.style.borderBottom = '2px solid #fab1a0';
-               e.target.style.color = '#fab1a0';
-               alert("invalid user");
+               console.info("trouble with user name");
            }
-
        }
 
        if(validationElement === 'password'){
@@ -115,27 +103,9 @@ class RegistrationScreen extends Component {
                this.setState({
                    passwordInputValidated: false
                });
-               e.target.style.borderBottom = '2px solid #fab1a0';
-               e.target.style.color = '#fab1a0';
-               alert("invalid password");
+               console.info("trouble with password");
            }
         }
-
-        // if(validationElement === 'password-confirm'){
-        //     let passwordRegExp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-        //     if(passwordRegExp.test(e.target.value)){
-        //         this.setState({
-        //             passwordInputConfValidated: true
-        //         })
-        //     }else{
-        //         this.setState({
-        //             passwordInputConfValidated: false
-        //         });
-        //         e.target.style.borderBottom = '2px solid #fab1a0';
-        //         e.target.style.color = '#fab1a0';
-        //     }
-        // }
-
         if(this.state.passwordInput !== '' && this.state.passwordInputConf !== ''){
             if(this.state.passwordInput === this.state.passwordInputConf){
                 this.setState({
@@ -145,9 +115,18 @@ class RegistrationScreen extends Component {
                 this.setState({
                     passwordsAreSame: false,
                 });
-                alert("passwords are not equal");
+                console.info("passwords not equal");
             }
         }
+    }
+    toggleRegistration(){
+        if(this.state.emailInputValidated &&
+            this.state.userInputValidated &&
+            this.state.passwordInputValidated &&
+            this.state.passwordsAreSame){
+            console.info('all right')
+        }
+
     }
 
     render() {
@@ -158,30 +137,46 @@ class RegistrationScreen extends Component {
                 <input className='custom-input' id='email'
                        onFocus={ e => this.toggleFocus(e)}
                        onChange={e => this.getEmail(e)}
-                       onBlur={ e => this.validation(e)}/>
+                       onBlur={ e => this.validation(e)}
+                       style={this.state.emailInputValidated === false
+                           ? {borderBottom: '2px solid #fab1a0', color: '#fab1a0'}
+                           : {borderBottom: '2px solid #d8d8d8', color: '#d8d8d8'}}
+                />
                 </div>
                 <div className='lable'>User</div>
                 <div className='geometry'>
                     <input className='custom-input' id='user'
                            onFocus={ e => this.toggleFocus(e)}
                            onChange={e => this.getUser(e)}
-                           onBlur={e => this.validation(e)}/>
+                           onBlur={e => this.validation(e)}
+                           style={this.state.userInputValidated === false
+                               ? {borderBottom: '2px solid #fab1a0', color: '#fab1a0'}
+                               : {borderBottom: '2px solid #d8d8d8', color: '#d8d8d8'}}
+                    />
                 </div>
                 <div className='lable'>Password</div>
                 <div className='geometry'>
                     <input className='custom-input' id='password'
                            onFocus={ e => this.toggleFocus(e)}
                            onChange={e => this.getPassword(e)}
-                           onBlur={e => this.validation(e)}/>
+                           onBlur={e => this.validation(e)}
+                           style={this.state.passwordInputValidated === false
+                               ? {borderBottom: '2px solid #fab1a0', color: '#fab1a0'}
+                               : {borderBottom: '2px solid #d8d8d8', color: '#d8d8d8'}}
+                    />
                 </div>
                 <div className='lable'>Password Confirmation</div>
                 <div className='geometry'>
                     <input className='custom-input' id='password-confirm'
                            onFocus={ e => this.toggleFocus(e)}
                            onChange={e => this.getPasswordConf(e)}
-                           onBlur={e => this.validation(e)}/>
+                           onBlur={e => this.validation(e)}
+                           style={this.state.passwordsAreSame === false
+                               ? {borderBottom: '2px solid #fab1a0', color: '#fab1a0'}
+                               : {borderBottom: '2px solid #d8d8d8', color: '#d8d8d8'}}
+                    />
                 </div>
-                <div className="button-geometry">Create Account</div>
+                <div className="button-geometry" onClick={e => this.toggleRegistration(e)}>Create Account</div>
             </div>
 
         );
