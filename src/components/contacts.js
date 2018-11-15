@@ -20,7 +20,8 @@ const Container = styled.div`
 position: absolute;
 top: 150px;
 left: 8px;
-right: 0;
+right: 0; justify-content: flex-end;
+ align-items: center;  
 display: flex;
 flex-direction: column;
 font-family: 'Montserrat', sans-serif;
